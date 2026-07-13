@@ -1,0 +1,1 @@
+{"version":3,"file":"Toast.d.ts","sourceRoot":"","sources":["../../../src/ui/Toast.ts"],"names":[],"mappings":"AAAA,qBAAa,KAAK;WACF,IAAI,CAAC,OAAO,EAAE,MAAM,EAAE,IAAI,GAAE,SAAS,GAAG,OAAO,GAAG,MAAe,GAAG,IAAI;IAwBtF,OAAO,CAAC,MAAM,CAAC,MAAM;IAOrB,OAAO,CAAC,MAAM,CAAC,YAAY;CAS5B"}

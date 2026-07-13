@@ -1,0 +1,1 @@
+{"version":3,"file":"ParallaxEffect.d.ts","sourceRoot":"","sources":["../../../src/ui/ParallaxEffect.ts"],"names":[],"mappings":"AAAA,qBAAa,cAAc;IACzB,OAAO,CAAC,OAAO,CAAc;IAC7B,OAAO,CAAC,UAAU,CAAc;IAChC,OAAO,CAAC,KAAK,CAAS;IACtB,OAAO,CAAC,OAAO,CAAkB;gBAErB,WAAW,EAAE,MAAM,EAAE,eAAe,EAAE,MAAM,EAAE,KAAK,GAAE,MAAY;IAc7E,OAAO,CAAC,IAAI;IAMZ,OAAO,CAAC,QAAQ;IAUhB,OAAO,CAAC,cAAc;CAevB"}
