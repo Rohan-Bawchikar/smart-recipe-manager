@@ -183,7 +183,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.DINNER,
           isVegetarian: false,
-          imageUrl: '/images/butter_chicken.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/butter_chicken.png'
         },
         {
           name: 'Palak Paneer',
@@ -194,7 +194,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.LUNCH,
           isVegetarian: true,
-          imageUrl: '/images/palak_paneer.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/palak_paneer.png'
         },
         {
           name: 'Masala Dosa',
@@ -205,7 +205,7 @@ class App {
           difficulty: 'Hard' as any,
           category: Category.BREAKFAST,
           isVegetarian: true,
-          imageUrl: '/images/masala_dosa.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/masala_dosa.png'
         },
         {
           name: 'Chole Bhature',
@@ -216,7 +216,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.LUNCH,
           isVegetarian: true,
-          imageUrl: '/images/chole_bhature.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/chole_bhature.png'
         },
         {
           name: 'Hyderabadi Chicken Biryani',
@@ -227,7 +227,7 @@ class App {
           difficulty: 'Hard' as any,
           category: Category.DINNER,
           isVegetarian: false,
-          imageUrl: '/images/chicken_biryani.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/chicken_biryani.png'
         },
         {
           name: 'Punjabi Samosa',
@@ -238,7 +238,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.SNACK,
           isVegetarian: true,
-          imageUrl: '/images/punjabi_samosa.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/punjabi_samosa.png'
         },
         {
           name: 'Gulab Jamun',
@@ -249,7 +249,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.DESSERT,
           isVegetarian: true,
-          imageUrl: '/images/gulab_jamun.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/gulab_jamun.png'
         },
         {
           name: 'Dal Makhani',
@@ -260,7 +260,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.LUNCH,
           isVegetarian: true,
-          imageUrl: '/images/dal_makhani.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/dal_makhani.png'
         },
         {
           name: 'Tandoori Chicken',
@@ -271,7 +271,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.DINNER,
           isVegetarian: false,
-          imageUrl: '/images/tandoori_chicken.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/tandoori_chicken.png'
         },
         {
           name: 'Paneer Tikka',
@@ -282,7 +282,7 @@ class App {
           difficulty: 'Easy' as any,
           category: Category.SNACK,
           isVegetarian: true,
-          imageUrl: '/images/paneer_tikka.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/paneer_tikka.png'
         },
         {
           name: 'Rogan Josh',
@@ -293,7 +293,7 @@ class App {
           difficulty: 'Hard' as any,
           category: Category.DINNER,
           isVegetarian: false,
-          imageUrl: '/images/rogan_josh.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/rogan_josh.png'
         },
         {
           name: 'Idli Sambar',
@@ -304,7 +304,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.BREAKFAST,
           isVegetarian: true,
-          imageUrl: '/images/idli_sambar.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/idli_sambar.png'
         },
         {
           name: 'Rasgulla',
@@ -315,7 +315,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.DESSERT,
           isVegetarian: true,
-          imageUrl: '/images/rasgulla.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/rasgulla.png'
         },
         {
           name: 'Aloo Gobi',
@@ -326,7 +326,7 @@ class App {
           difficulty: 'Easy' as any,
           category: Category.LUNCH,
           isVegetarian: true,
-          imageUrl: '/images/aloo_gobi.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/aloo_gobi.png'
         },
         {
           name: 'Vada Pav',
@@ -337,7 +337,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.SNACK,
           isVegetarian: true,
-          imageUrl: '/images/vada_pav.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/vada_pav.png'
         },
         {
           name: 'Gajar Ka Halwa',
@@ -348,7 +348,7 @@ class App {
           difficulty: 'Medium' as any,
           category: Category.DESSERT,
           isVegetarian: true,
-          imageUrl: '/images/gajar_halwa.png'
+          imageUrl: import.meta.env.BASE_URL + 'images/gajar_halwa.png'
         }
       ];
 
