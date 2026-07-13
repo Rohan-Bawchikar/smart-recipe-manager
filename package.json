@@ -1,0 +1,24 @@
+{
+  "name": "smart-recipe-manager",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Recipe Management System built with TypeScript, HTML5, CSS3, and LocalStorage",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "keywords": [
+    "typescript",
+    "recipe-manager",
+    "enterprise",
+    "clean-architecture",
+    "oop"
+  ],
+  "author": "Rohan B Bawchikar",
+  "license": "MIT"
+}
