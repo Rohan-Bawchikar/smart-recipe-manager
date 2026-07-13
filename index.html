@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍳</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise Recipe Manager</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-BX771Zzy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-COkIkwGW.css">
+  </head>
+  <body>
+    <!-- Hero Parallax Section & Floating Navbar -->
+    <header id="hero-banner" class="hero-parallax">
+      <!-- Top Navigation Floating on Hero -->
+      <nav class="navbar glass">
+        <div class="nav-brand">
+          <span class="logo-icon">🍳</span>
+          <h1>Smart Recipe Manager <span class="badge badge-enterprise">Enterprise Edition</span></h1>
+        </div>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn btn-icon" title="Toggle Theme">🌓</button>
+          <button id="btn-add-recipe" class="btn btn-primary">+ Add Recipe</button>
+        </div>
+      </nav>
+
+      <div class="hero-parallax-bg"></div>
+      <div class="hero-parallax-content container">
+        <h2 class="hero-title">Discover Culinary Excellence</h2>
+        <p class="hero-subtitle">Elevate your cooking experience with Enterprise-grade recipe management.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Dashboard Statistics -->
+      <section class="dashboard-section">
+        <h2 class="section-title">Dashboard Overview</h2>
+        <div id="dashboard-container"></div>
+      </section>
+
+      <!-- Controls Area (Search & Filters) -->
+      <section class="controls-section glass">
+        <div class="search-wrapper">
+          <input type="text" id="search-input" class="form-control" placeholder="Search recipes by name or ingredient..." />
+          <span class="search-icon">🔍</span>
+        </div>
+        
+        <div class="filter-group">
+          <select id="category-select" class="form-control" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <!-- Injected via TS -->
+          </select>
+          
+          <select id="filter-select" class="form-control" aria-label="Filter by diet">
+            <option value="all">All Diets</option>
+            <option value="veg">Vegetarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+            <option value="favorites">Favorites Only</option>
+          </select>
+
+          <select id="sort-select" class="form-control" aria-label="Sort recipes">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="alphabetical">A-Z</option>
+            <option value="difficulty">Difficulty</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Recipe Grid Area -->
+      <section class="recipe-section">
+        <div id="recipe-grid" class="recipe-grid"></div>
+        <!-- Empty state is dynamically injected or toggled by TS -->
+      </section>
+    </main>
+
+    <!-- Modal Form (Hidden by default) -->
+    <div id="form-modal" class="modal">
+      <div class="modal-content glass">
+        <div class="modal-header">
+          <h2>Recipe Editor</h2>
+          <button type="button" class="close-btn" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="recipe-form">
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="name">Recipe Name *</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Classic Margherita Pizza" />
+              </div>
+              <div class="form-group">
+                <label for="cookingTimeMinutes">Cooking Time (mins) *</label>
+                <input type="number" id="cookingTimeMinutes" name="cookingTimeMinutes" class="form-control" min="1" value="30" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Description *</label>
+              <textarea id="description" name="description" class="form-control" rows="2" placeholder="Brief description of the recipe"></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="category">Category *</label>
+                <select id="category" name="category" class="form-control">
+                  <option value="Breakfast">Breakfast</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                  <option value="Dessert">Dessert</option>
+                  <option value="Snack">Snack</option>
+                </select>
+              </div>
+              <div class="form-group flex-1">
+                <label for="difficulty">Difficulty *</label>
+                <select id="difficulty" name="difficulty" class="form-control">
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group flex-1">
+                <label for="ingredients">Ingredients (one per line) *</label>
+                <textarea id="ingredients" name="ingredients" class="form-control" rows="4" placeholder="Tomato&#10;Cheese&#10;Dough"></textarea>
+              </div>
+              <div class="form-group flex-1">
+                <label for="instructions">Instructions (one per line) *</label>
+                <textarea id="instructions" name="instructions" class="form-control" rows="4" placeholder="Prepare dough&#10;Add toppings&#10;Bake"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="imageUrl">Image URL (Optional)</label>
+              <input type="url" id="imageUrl" name="imageUrl" class="form-control" placeholder="https://..." />
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="custom-checkbox" for="isVegetarian">
+                <input type="checkbox" id="isVegetarian" name="isVegetarian" />
+                <span class="checkmark"></span>
+                This recipe is Vegetarian
+              </label>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save Recipe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- View Recipe Modal -->
+    <div id="view-modal" class="modal">
+      <div class="modal-content glass view-modal-container p-0">
+        <button type="button" class="close-btn view-close-btn" data-dismiss="modal">&times;</button>
+        <div class="view-modal-image">
+          <img id="view-img" src="" alt="Recipe Image" />
+        </div>
+        <div class="view-modal-details">
+          <div class="view-header">
+            <h2 id="view-title">Recipe Title</h2>
+            <p id="view-desc" class="view-desc">Description</p>
+            <div class="view-tags">
+              <span id="view-difficulty" class="badge"></span>
+              <span id="view-diet" class="badge"></span>
+            </div>
+            <div class="view-meta">
+              <span class="meta-icon">⏱</span> <strong>Total:</strong> <span id="view-time"></span> mins
+            </div>
+          </div>
+          
+          <div class="view-section">
+            <h3>Ingredients</h3>
+            <ul id="view-ingredients"></ul>
+          </div>
+          
+          <div class="view-section">
+            <h3>Steps</h3>
+            <ol id="view-instructions"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
